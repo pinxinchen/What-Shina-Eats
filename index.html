@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What Shina Eat</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <style>
+        .bg{
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to top, rgba(255,153,102,0.2), rgba(255,94,98,0.2)), url(images/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            z-index: -1;
+            
+        }
+        .outer{
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .wrapper{
+            max-width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: all .5s;
+            margin:0 calc(50% - 450px);
+            top: 150px;
+        }
+        /*                                                      Header                                                            */
+        .wrapper0{
+            height: 960px;
+        }
+        .content{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 300px;
+            animation-name: opening;
+            animation-duration: .8s;
+        }
+        .content .inner{
+            width: 600px;
+            height: 250px;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 80px;
+        }
+
+       @keyframes opening {
+        from {height:0;}
+        to {height: 300px;}
+        }
+
+        .border-middle{
+            height: 35px;
+            width: 300px;
+            border-right: 1px solid #fff;
+        }
+        h1{
+            font-size: 2.3rem;
+            line-height: 1.3;
+            letter-spacing: 0.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        header p{
+            font-size: 0.8rem;
+            line-height: 2;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        header nav{
+            margin: 0 auto;
+            width: 650px;
+            height: 60px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        header nav ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        header ul li{
+            line-height: 60px;
+            width: 100%;
+        }
+        header ul li a{
+            width: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 0.2rem;
+            font-size: 0.8rem;
+            display: block;
+            border-right: 1px solid #fff;
+        }
+        header ul li:hover a{
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+
+        /*                                                        intro                                                                    */
+        
+        .wrapper1{
+            position: absolute;
+            left:0;
+            transform: translateX(-1500px);
+            opacity: 0;
+        }
+        .main{
+            width: 900px;
+            background: rgba(175, 175, 175, 0.6);
+            border-radius: 4px;
+            padding: 80px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .major{
+            border-bottom: solid 1px #fff;
+            padding-bottom: 0.5rem;
+            margin: 0 0 2rem 0;
+            font-size: 1.5rem;
+            line-height: 1.4;
+            letter-spacing: 0.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+        .main .image{
+            width: 100%;
+            object-fit: cover;
+            text-align: center;
+            border-radius: 4px; 
+        }
+        .main p{
+            padding-top: 50px;
+            line-height: 30px;
+            font-size: 20px;
+            letter-spacing: 0.2rem;
+        }
+        .cross_intro, .cross_delicacy, .cross_about, .cross_contact{
+            width: 55px;
+            height: 55px;
+            background: transparent;
+            position: absolute;
+            right: 30px;
+            top:30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .5s;
+        }
+        .cross1{
+            width: 30px;
+            height: 15px;
+            border-bottom: 1px solid #fff;
+            transform: rotate(45deg);
+            transform-origin: 19% 239%;
+        }
+        .cross2{
+            width: 30px;
+            height: 15px;
+            border-bottom: 1px solid #fff;
+            transform: rotate(-45deg);
+            transform-origin: 61% -5%;
+        }
+        .cross:hover{
+            background: rgba(236, 236, 236, 0.5);
+        }
+
+        /*                                                                  delicacy                                                                       */
+        
+        .wrapper2{
+            position: absolute;
+            top: 0;
+            transform: translateY(2000px);
+        }
+        .light_box{
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255,255,255,.5);
+            position: absolute;
+            top: -80px;
+            left:-510px;
+            z-index:999;
+            display: flex;
+            justify-content: center;
+            align-items: center;           
+        }
+        .showFood{
+            width: 900px;
+            background:black;
+            height: 500px;
+            display: flex;
+        }
+        .foodPic{
+            width: 600px;
+            height: 100%;
+            border: 1px solid white;
+            background-size: cover;
+        }
+        .foodText{
+            width: 300px;
+            height: 100%;
+            border: 1px solid white;
+
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .square{
+            width: 180px;
+            height: 180px;
+            margin: 0 5px 5px 0;
+            overflow: hidden;
+            border: 1px solid #fff;
+        }
+        .square img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .5s;
+        }
+        .square a{
+            border-bottom:none; 
+        }
+        .square:hover img{
+            transform: scale(1.04);
+        }
+        
+        
+        /*                                                                     about                                                                          */
+ 
+        .wrapper3{
+            position: absolute;
+            right:0;
+            top:-230px;
+            transform: translateX(1500px);
+        }
+       
+
+        /*                                                                   contact                                                                               */
+   
+        .wrapper4{
+            position: absolute;
+            top: 0;
+            transform: translateY(-2000px);
+        }
+        form {
+        margin: 0 0 2rem 0;
+        }
+        .fields {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: -1.5rem 0 2rem -1.5rem;
+        }
+        .field {
+            padding: 1.5rem 0 0 1.5rem;
+            width: 100%;
+        }
+        .half {
+            width: 50% ;
+        }   
+        label {
+            color: #ffffff;
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 0.2rem;
+            line-height: 1.5;
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+        }
+        input[type="text"],
+        input[type="email"],textarea{
+            background-color: transparent;
+            border-radius: 4px;
+            border: solid 1px #ffffff;
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            height: 50px;
+            font-size: 1.2rem;
+            font-family: "微軟正黑體";
+            padding-left:10px ;
+        }
+        textarea{
+            height: 100px;
+        }
+        .actions{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+        .actions li{
+            margin-right: 15px;
+        }
+        .icons{
+            width: 200px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+        } 
+         .icons li{
+            height: 50px;
+            width: 50px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .icons li a{
+            margin: 0 auto;
+            transform: scale(1.5);
+        }
+        .svg-inline--fa{
+            height: 1.5em;
+            vertical-align: -1.425em;
+        }
+        .svg-inline--fa.fa-w-9{
+            width: 2.9625em;
+        }
+        .svg-inline--fa.fa-w-14 {
+            width: 2.975em;
+        }
+        /*
+        .facebook{
+            height: 40px;
+            width: 40px;
+        }
+        .facebook img{
+            background: transparent;
+        } */ 
+        
+        input[type=submit], input[type=reset] {
+            width: 200px;
+            background-color: transparent;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 0.2rem;
+            line-height: 1.5;
+            margin: 0 0 1rem 0;
+            text-transform: uppercase;
+            transition: all .5s;
+            text-align: center;
+        }
+
+        input[type=submit], input[type=reset]:hover {
+            background-color:rgba(255, 255, 255, 0.3);
+        }
+        
+        /*                                                                     footer                                                              */
+
+        footer{
+            position: fixed;
+            width: 400px;
+            bottom: 80px;
+            right: calc(50% - 200px);
+        }
+        footer p{
+            font-size: 0.6rem;
+            letter-spacing: 0.2rem;
+            opacity: 0.75;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .border-none{
+            border: none;
+        }
+        .display-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+
+    </div>
+    <div class="outer">
+	<!-- Header -->
+    <div class="wrapper wrapper0 "> 
+        <header>
+            <div class="content">
+                <div class="inner">
+                    <h1>I'm Shina Chen</h1>
+                    <p>I am a foodie and I love coding.</p>
+                </div>
+                <div class="border-middle"></div>
+                <div class="border-middle"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="btn-intro">Intro</a></li>
+                    <li><a href="#" class="btn-delicacy">Delicacy</a></li>
+                    <li><a href="#" class="btn-about">About</a></li>
+                    <li><a href="#" class="border-none btn-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Footer -->
+        <footer>
+            <p class="copyright">&copy; 2018 PinXin Chen. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <!-- Intro -->
+    <div class="wrapper wrapper1">
+        <article id="intro" class="main">
+            <div class="cross_intro">
+                <div class="cross1"></div>
+                <div class="cross2"></div>
+            </div>
+            <h2 class="major">Intro</h2>
+            <div><img src="images/pic01.jpg" class="image" alt="" /></div>
+            <p>嗨，我是Shina，今年24歲，興趣是吃東西，喜歡跟朋友分享好吃好玩的東西，在這裡集結了Shina所走過吃過值得回訪再三的巷弄美食，讓每一個重視吃，懂得吃的饕客們多一些選擇。Just Do Eat!</p>
+            <p>當吃不只是為了填飽肚子，當吃東西變成生活的樂趣時，發掘常人所沒發掘的，引領新美食潮流從此開始。</p>
+            
+        </article>
+    </div>
+    <!-- Delicacy -->
+    <div class="wrapper wrapper2">
+        <article id="delicacy" class="main">
+            <div class="cross_delicacy">
+                <div class="cross1"></div>
+                <div class="cross2"></div>
+            </div>
+            <h2 class="major">Delicacy</h2>
+            <div class="light_box">
+                <div class="showFood">
+                    <div class="foodPic"></div>
+                    <div class="foodText"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="square"><a href=""><img src="images/f1-1.jpg" data-foodnum="1" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f2-1.jpg" data-foodnum="2" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f3-1.jpg" data-foodnum="3" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f4-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f5-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f6-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f7-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f8-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f9-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f10-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f11-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f12-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f13-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f14-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f15-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f16-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f17-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f18-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f19-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f20-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f21-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f22-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f23-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f24-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f25-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f26-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f27-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f28-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f29-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f30-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f31-1.jpg" alt=""></a></div>
+                <div class="square"><a href="#"><img src="images/f32-1.jpg" data-foodnum="32" alt=""></a></div>
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BYNtNV-lbck/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:37.4537037037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BYNtNV-lbck/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">燈籠滷味_師大商圈 - 師大商圈頗具代表性的加熱滷味店 整體口味偏甜 以盤子盛裝是沒有湯的噢 / 這次點了烏龍麵、花椰菜、豆皮、竹輪共$70 以夜市物價還算便宜 / 口味上小辣不太辣 份量不少，酸菜跟蔥花也給的很大方 但酸菜味道也是偏甜，我跟朋友都吃不習慣 整體來說cp值尚可但香師傅還是我心裡的第一名 另外內用區在地下一樓需要低消一杯30元飲料 / 🏠台北市大安區師大路43號 📞(02)2365-7172 #台北美食#師大美食#滷味#小吃#燈籠滷味#加熱滷味</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/what_shina_eats/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> SHINA</a>（@what_shina_eats）分享的貼文 於 <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-25T10:54:52+00:00">PDT 2017 年 8月 月 25 日 上午 3:54</time> 張貼</p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+            </div>
+        </article>
+    </div>
+    <!-- About -->
+    <div class="wrapper wrapper3" id="wrapper3">
+        <article id="about" class="main">
+            <div class="cross_about">
+                <div class="cross1"></div>
+                <div class="cross2"></div>
+            </div>
+            <h2 class="major">About</h2>
+            <div><img src="images/" class="image" alt="" /></div>
+            <p>123</p>
+        </article>
+    </div>
+    <!-- Contact -->
+    <div class="wrapper wrapper4">
+        <article id="contact" class="main">
+            <div class="cross_contact">
+                <div class="cross1"></div>
+                <div class="cross2"></div>
+            </div>
+            <h2 class="major">Contact</h2>
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field half">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                </ul>
+            </form>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/pinxin.chen" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/what_shina_eats/" target="_blank"  class="instagram"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </article>
+    </div>
+</div>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        $(".btn-intro").click(function(){
+            $(".wrapper1").css("transform", "translateX(0)");
+            $(".outer").css("height", "130vh");
+            $(".wrapper0").css("opacity", "0");
+            $(".wrapper1").css("opacity", "1");
+        });
+        $(".btn-delicacy").click(function(){
+            $(".wrapper2").css("transform", "translateY(462px)");
+            $(".outer").css("height", "196vh");
+            $(".wrapper0").css("opacity", "0");
+            $(".wrapper2").css("opacity", "1");
+        });
+        $(".btn-about").click(function(){
+            $(".wrapper3").css("transform", "translateX(0px)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "0");
+            $(".wrapper3").css("opacity", "1");
+        });
+        $(".btn-contact").click(function(){
+            $(".wrapper4").css("transform", "translateY(-73px)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "0");
+            $(".wrapper4").css("opacity", "1");
+        });
+    </script>
+    <script>
+        $(".cross_intro").click(function(){
+            $(".wrapper1").css("transform", "translateX(-1500px)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "1");
+            $(".wrapper1").css("opacity", "0");
+        });
+        $(".cross_delicacy").click(function(){
+            $(".wrapper2").css("transform", "translateY(2000px)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "1");
+            $(".wrapper2").css("opacity", "0");
+        });
+        $(".cross_about").click(function(){
+            $(".wrapper3").css("transform", "translateX(1500px)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "1");
+            $(".wrapper3").css("opacity", "0");
+        });
+        $(".cross_contact").click(function(){
+            $(".wrapper4").css("transform", "translateY(-2000px)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "1");
+            $(".wrapper4").css("opacity", "0");
+        });
+        $(".square a img").click(function(){
+            var FoodPicNum=$(this).attr("data-foodnum")
+            var foodPicPath=$(this).attr("src")
+            console.log(foodPicPath)
+            console.log($(this).attr("src"))
+            $(".foodPic").css("background", "url(" +foodPicPath+ ")").css("background-size", "cover")
+            $(".foodText").text("what_shina_eats胡同口麵館_捷運市府站-酸辣乾拌麵$75一上桌是乾淨的白麵條，底部則是超夠味的酸辣醬汁；麵條粗細算中偏細，煮的恰到好處非常Q帶咬勁，推👍🏼醬汁給的算多，每條麵都沾的到，酸中帶點麻跟辣，推薦給重口味的人，搭配點小黃瓜絲，超～喜～歡😋😋")
+        });
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+</body>
+</html>
