@@ -12,11 +12,18 @@
             height: 100vh;
             width: 100%;
             background-image: linear-gradient(to top, rgba(255,153,102,0.2), rgba(255,94,98,0.2)), url(images/bg.jpg);
+            /* background-image: linear-gradient(to top, rgba(255,153,102,0.2), rgba(255,94,98,0.2)), url(images/bg.jpg); */
             background-repeat: no-repeat;
             background-size: cover;
             position: fixed;
             z-index: -1;
             
+        }
+        ::-webkit-scrollbar {
+            width: 1.5px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: pink; 
         }
         .outer{
             height: 100vh;
@@ -187,7 +194,7 @@
             transform: rotate(-45deg);
             transform-origin: 61% -5%;
         }
-        .cross:hover{
+        .cross_intro:hover, .cross_delicacy:hover, .cross_about:hover, .cross_contact:hover{
             background: rgba(236, 236, 236, 0.5);
         }
 
@@ -208,7 +215,8 @@
             z-index:999;
             display: flex;
             justify-content: center;
-            align-items: center;           
+            align-items: center;
+            display: none;           
         }
         .showFood{
             width: 900px;
@@ -329,7 +337,6 @@
             display: flex;
             justify-content: center;
             margin: 0 auto;
-
         } 
          .icons li{
             height: 50px;
@@ -337,6 +344,9 @@
             border: 1px solid #fff;
             border-radius: 50%;
             margin-right: 20px;
+        }
+        .icons li:hover{
+            background: rgba(236, 236, 236, 0.5);
         }
         .icons li a{
             margin: 0 auto;
@@ -352,14 +362,6 @@
         .svg-inline--fa.fa-w-14 {
             width: 2.975em;
         }
-        /*
-        .facebook{
-            height: 40px;
-            width: 40px;
-        }
-        .facebook img{
-            background: transparent;
-        } */ 
         
         input[type=submit], input[type=reset] {
             width: 200px;
@@ -461,50 +463,49 @@
             </div>
             <h2 class="major">Delicacy</h2>
             <div class="light_box">
-                <div class="showFood">
+                <!-- <div class="showFood">
                     <div class="foodPic"></div>
                     <div class="foodText"></div>
-                </div>
+                </div> -->
             </div>
             <div class="container">
-                <div class="square"><a href=""><img src="images/f1-1.jpg" data-foodnum="1" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f2-1.jpg" data-foodnum="2" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f3-1.jpg" data-foodnum="3" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f4-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f5-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f6-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f7-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f8-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f9-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f10-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f11-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f12-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f13-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f14-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f15-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f16-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f17-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f18-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f19-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f20-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f21-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f22-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f23-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f24-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f25-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f26-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f27-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f28-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f29-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f30-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f31-1.jpg" alt=""></a></div>
-                <div class="square"><a href="#"><img src="images/f32-1.jpg" data-foodnum="32" alt=""></a></div>
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BYNtNV-lbck/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:37.4537037037037% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BYNtNV-lbck/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">燈籠滷味_師大商圈 - 師大商圈頗具代表性的加熱滷味店 整體口味偏甜 以盤子盛裝是沒有湯的噢 / 這次點了烏龍麵、花椰菜、豆皮、竹輪共$70 以夜市物價還算便宜 / 口味上小辣不太辣 份量不少，酸菜跟蔥花也給的很大方 但酸菜味道也是偏甜，我跟朋友都吃不習慣 整體來說cp值尚可但香師傅還是我心裡的第一名 另外內用區在地下一樓需要低消一杯30元飲料 / 🏠台北市大安區師大路43號 📞(02)2365-7172 #台北美食#師大美食#滷味#小吃#燈籠滷味#加熱滷味</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/what_shina_eats/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> SHINA</a>（@what_shina_eats）分享的貼文 於 <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-25T10:54:52+00:00">PDT 2017 年 8月 月 25 日 上午 3:54</time> 張貼</p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+                <div class="square"><a href="https://www.instagram.com/p/BksBHttHa9I/" target="_blank"><img src="images/f1-1.jpg" data-foodnum="1" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BkkUCe5HTpe/" target="_blank"><img src="images/f2-1.jpg" data-foodnum="2" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bij6ojPHzGn/" target="_blank"><img src="images/f3-1.jpg" data-foodnum="3" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bh9Io4WnAfW/" target="_blank"><img src="images/f4-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bhopn_gHTSG/" target="_blank"><img src="images/f5-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BhMS0MuH83g/" target="_blank"><img src="images/f6-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bgdm2Qwgywc/" target="_blank"><img src="images/f7-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bf-6DQ_nTgb/?taken-by=what_shina_eats" target="_blank"><img src="images/f8-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bf3FL5Ln7S-/" target="_blank"><img src="images/f9-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BflUO8qnFwc/" target="_blank"><img src="images/f10-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BfI-4DynNtb/" target="_blank"><img src="images/f11-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BexiPptHby0/" target="_blank"><img src="images/f12-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bew6R2KHnhk/" target="_blank"><img src="images/f13-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Berf-rFnngF/" target="_blank"><img src="images/f14-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bep0QOln61B/" target="_blank"><img src="images/f15-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bdr56MXnQ8E/" target="_blank"><img src="images/f16-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bdp5KuIH0Pj/" target="_blank"><img src="images/f17-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BdnLd5-nKWJ/" target="_blank"><img src="images/f18-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bczml3_nh-7/" target="_blank"><img src="images/f19-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BcugGpDHgin/" target="_blank"><img src="images/f20-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BcpU8hBlARj/" target="_blank"><img src="images/f21-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BcUnHnnliGe/" target="_blank"><img src="images/f22-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BcOtknDFJOn/" target="_blank"><img src="images/f23-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BbzIMvnFa1u/" target="_blank"><img src="images/f24-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BbuEv8eFZVm/" target="_blank"><img src="images/f25-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BbZMcq9lgyU/" target="_blank"><img src="images/f26-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BbMK40OlMHa/" target="_blank"><img src="images/f27-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BbBt7w_lwX6/" target="_blank"><img src="images/f28-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/Bag-BQsFeI6/" target="_blank"><img src="images/f29-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BaWGNlGlcoI/" target="_blank"><img src="images/f30-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BaHJM5yFTG-/" target="_blank"><img src="images/f31-1.jpg" alt=""></a></div>
+                <div class="square"><a href="https://www.instagram.com/p/BaBwuIYFf9i/" target="_blank"><img src="images/f32-1.jpg" data-foodnum="32" alt=""></a></div>
             </div>
         </article>
     </div>
     <!-- About -->
-    <div class="wrapper wrapper3" id="wrapper3">
+    <div class="wrapper wrapper3">
         <article id="about" class="main">
             <div class="cross_about">
                 <div class="cross1"></div>
@@ -574,7 +575,7 @@
             $(".wrapper3").css("opacity", "1");
         });
         $(".btn-contact").click(function(){
-            $(".wrapper4").css("transform", "translateY(-73px)");
+            $(".wrapper4").css("transform", "translateY(1px)");
             $(".outer").css("height", "100vh");
             $(".wrapper0").css("opacity", "0");
             $(".wrapper4").css("opacity", "1");
@@ -605,14 +606,14 @@
             $(".wrapper0").css("opacity", "1");
             $(".wrapper4").css("opacity", "0");
         });
-        $(".square a img").click(function(){
-            var FoodPicNum=$(this).attr("data-foodnum")
-            var foodPicPath=$(this).attr("src")
-            console.log(foodPicPath)
-            console.log($(this).attr("src"))
-            $(".foodPic").css("background", "url(" +foodPicPath+ ")").css("background-size", "cover")
-            $(".foodText").text("what_shina_eats胡同口麵館_捷運市府站-酸辣乾拌麵$75一上桌是乾淨的白麵條，底部則是超夠味的酸辣醬汁；麵條粗細算中偏細，煮的恰到好處非常Q帶咬勁，推👍🏼醬汁給的算多，每條麵都沾的到，酸中帶點麻跟辣，推薦給重口味的人，搭配點小黃瓜絲，超～喜～歡😋😋")
-        });
+        // $(".square a img").click(function(){
+        //     var FoodPicNum=$(this).attr("data-foodnum")
+        //     var foodPicPath=$(this).attr("src")
+        //     console.log(foodPicPath)
+        //     console.log($(this).attr("src"))
+        //     $(".foodPic").css("background", "url(" +foodPicPath+ ")").css("background-size", "cover")
+        //     $(".foodText").text("what_shina_eats胡同口麵館_捷運市府站-酸辣乾拌麵$75一上桌是乾淨的白麵條，底部則是超夠味的酸辣醬汁；麵條粗細算中偏細，煮的恰到好處非常Q帶咬勁，推👍🏼醬汁給的算多，每條麵都沾的到，酸中帶點麻跟辣，推薦給重口味的人，搭配點小黃瓜絲，超～喜～歡😋😋")
+        // });
     </script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 </body>
