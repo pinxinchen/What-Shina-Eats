@@ -54,6 +54,12 @@
         .wrapper0{
             height: 960px;
         }
+        @media screen and (max-width: 376px) {
+            .wrapper0{
+                margin: 0;
+                margin-top: -13px;;
+            }
+        }
         .content{
             display: flex;
             justify-content: center;
@@ -84,6 +90,11 @@
             height: 35px;
             width: 300px;
             border-right: 1px solid #fff;
+        }
+        @media screen and (max-width: 376px) {
+            border-middle{
+            border-right: none;
+            }   
         }
         h1{
             font-size: 2.3rem;
@@ -151,6 +162,11 @@
             line-height: 60px;
             width: 100%;
         }
+        @media screen and (max-width: 376px) {
+            header nav ul li{
+             border-bottom: 1px solid #fff;
+         }   
+        }
         header ul li a{
             width: 100%;
             text-decoration: none;
@@ -166,7 +182,7 @@
         }
         @media screen and (max-width: 376px) {
             header ul li a, .border-none{
-                border-bottom: 1px solid rgb(255, 255, 255);
+                border-right: none;
                 font-size: 1.4rem;
          }   
         }
@@ -305,7 +321,6 @@
             height: 180px;
             margin: 0 5px 5px 0;
             overflow: hidden;
-            border: 1px solid #fff;
         }
         @media screen and (max-width: 376px) {
             .square{
@@ -451,6 +466,11 @@
             justify-content: center;
             margin: 0 auto;
         } 
+        @media screen and (max-width: 376px) {
+            .icons{
+                transform: scale(1.5);
+         }   
+        }
          .icons li{
             height: 50px;
             width: 50px;
@@ -562,12 +582,6 @@
                 <div class="cross2"></div>
             </div>
             <h2 class="major">Delicacy</h2>
-            <div class="light_box">
-                <!-- <div class="showFood">
-                    <div class="foodPic"></div>
-                    <div class="foodText"></div>
-                </div> -->
-            </div>
             <div class="container">
                 <div class="square"><a href="https://www.instagram.com/p/BksBHttHa9I/" target="_blank"><img src="images/f1-1.jpg" alt="江記水盆羊肉"></a></div>
                 <div class="square"><a href="https://www.instagram.com/p/BkkUCe5HTpe/" target="_blank"><img src="images/f2-1.jpg" alt="12MINI"></a></div>
@@ -661,16 +675,31 @@
     crossorigin="anonymous"></script>
     <script>
         $(".btn-intro").click(function(){
+            if($(window).width()>500){
             $(".wrapper1").css("transform", "translateX(0)");
             $(".outer").css("height", "130vh");
             $(".wrapper0").css("opacity", "0");
             $(".wrapper1").css("opacity", "1");
+        }else{
+            $(".wrapper1").css("transform", "translateX(0)");
+            $(".outer").css("height", "100vh");
+            $(".wrapper0").css("opacity", "0");
+            $(".wrapper1").css("opacity", "1");
+        }
         });
+
         $(".btn-delicacy").click(function(){
+            if($(window).width()>500){
             $(".wrapper2").css("transform", "translateY(462px)");
             $(".outer").css("height", "196vh");
             $(".wrapper0").css("opacity", "0");
             $(".wrapper2").css("opacity", "1");
+        }else{
+            $(".wrapper2").css("transform", "translateY(462px)");
+            $(".outer").css("height", "170vh");
+            $(".wrapper0").css("opacity", "0");
+            $(".wrapper2").css("opacity", "1");
+        }
         });
         $(".btn-map").click(function(){
             $(".wrapper3").css("transform", "translateX(0px)");
