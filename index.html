@@ -265,7 +265,7 @@
                 text-align: justify;
          }   
         }
-        .cross_intro, .cross_delicacy, .cross_map, .cross_contact{
+        .cross_intro, .cross_menu, .cross_map, .cross_contact{
             width: 55px;
             height: 55px;
             background: transparent;
@@ -290,13 +290,13 @@
             transform: rotate(-45deg);
             transform-origin: 61% -5%;
         }
-        .cross_intro:hover, .cross_delicacy:hover, .cross_map:hover, .cross_contact:hover{
+        .cross_intro:hover, .cross_menu:hover, .cross_map:hover, .cross_contact:hover{
             background: rgba(236, 236, 236, 0.5);
         }
 
-        /*                                                                  delicacy                                                                       */
+        /*                                                                  menu                                                                       */
         @media screen and (max-width: 376px) {
-            .media_delicacy{
+            .media_menu{
                 margin-top: -407px;
          }   
         }
@@ -460,7 +460,7 @@
             margin-right: 15px;
         }
         .icons{
-            width: 200px;
+            width: 230px;
             height: 40px;
             display: flex;
             justify-content: center;
@@ -495,8 +495,10 @@
         .svg-inline--fa.fa-w-14 {
             width: 2.975em;
         }
-        
-        input[type=submit], input[type=reset] {
+        .svg-inline--fa.fa-w-16 {
+            width: 3em;
+        }
+        .mail, input[type=reset] {
             width: 200px;
             background-color: transparent;
             padding: 14px 20px;
@@ -514,13 +516,17 @@
             text-transform: uppercase;
             transition: all .5s;
             text-align: center;
+            
+        }
+        .mail a{
+            text-decoration: none;
         }
         @media screen and (max-width: 376px) {
-            input[type=submit], input[type=reset] {
+            .mail, input[type=reset] {
                 width: 254px;
          }   
         }
-        input[type=submit], input[type=reset]:hover {
+        .mail, input[type=reset]:hover {
             background-color:rgba(255, 255, 255, 0.3);
         }
         
@@ -549,7 +555,7 @@
             <nav>
                 <ul>
                     <li><a href="#" class="btn-intro">Intro</a></li>
-                    <li><a href="#" class="btn-delicacy">Delicacy</a></li>
+                    <li><a href="#" class="btn-menu">Menu</a></li>
                     <li><a href="#" class="btn-map">Map</a></li>
                     <li><a href="#" class="border-none btn-contact">Contact</a></li>
                 </ul>
@@ -574,14 +580,14 @@
             
         </article>
     </div>
-    <!-- Delicacy -->
+    <!-- Menu -->
     <div class="wrapper wrapper2">
-        <article id="delicacy" class="main media_delicacy">
-            <div class="cross_delicacy">
+        <article id="menu" class="main media_menu">
+            <div class="cross_menu">
                 <div class="cross1"></div>
                 <div class="cross2"></div>
             </div>
-            <h2 class="major">Delicacy</h2>
+            <h2 class="major">Menu</h2>
             <div class="container">
                 <div class="square"><a href="https://www.instagram.com/p/BksBHttHa9I/" target="_blank"><img src="images/f1-1.jpg" alt="江記水盆羊肉"></a></div>
                 <div class="square"><a href="https://www.instagram.com/p/BkkUCe5HTpe/" target="_blank"><img src="images/f2-1.jpg" alt="12MINI"></a></div>
@@ -658,13 +664,15 @@
                     </div>
                 </div>
                 <ul class="actions">
-                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                    <!-- <li><input type="submit" value="Send Message" class="primary" /></li> -->
+                    <li class="mail"><a href="mailto:anique5280@gmail.com">Send Message</a></li>
                     <li><input type="reset" value="Reset" /></li>
                 </ul>
             </form>
             <ul class="icons">
                 <li><a href="https://www.facebook.com/pinxin.chen" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://www.instagram.com/what_shina_eats/" target="_blank"  class="instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/pinxinchen" target="_blank"  class="github"><i class="fab fa-github"></i></a></li>
             </ul>
         </article>
     </div>
@@ -688,7 +696,7 @@
         }
         });
 
-        $(".btn-delicacy").click(function(){
+        $(".btn-menu").click(function(){
             if($(window).width()>500){
             $(".wrapper2").css("transform", "translateY(462px)");
             $(".outer").css("height", "196vh");
@@ -721,7 +729,7 @@
             $(".wrapper0").css("opacity", "1");
             $(".wrapper1").css("opacity", "0");
         });
-        $(".cross_delicacy").click(function(){
+        $(".cross_menu").click(function(){
             $(".wrapper2").css("transform", "translateY(2000px)");
             $(".outer").css("height", "100vh");
             $(".wrapper0").css("opacity", "1");
