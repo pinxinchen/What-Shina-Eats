@@ -829,14 +829,22 @@
         });
     </script>
     <script>
-        $(".next_page").click(function(){
-            $(".page1").addClass("display-none");
-            $(".page2").removeClass("display-none");
-        });
-        $(".prev_page").click(function(){
-            $(".page2").addClass("display-none");
-            $(".page1").removeClass("display-none");
-        });
+        // $(".next_page").click(function(){
+        //     $(".page1").addClass("display-none");
+        //     $(".page2").removeClass("display-none");
+            
+        // });
+
+        // $(".prev_page").click(function(){
+        //     $(".page2").addClass("display-none");
+        //     $(".page1").removeClass("display-none");
+        // });
+
+        $(".page").click(function(){
+            $(".container").toggleClass("display-none")
+            $("html").scrollTop(0)  
+        })
+        
     </script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 </body>
