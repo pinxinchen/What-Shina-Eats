@@ -280,6 +280,11 @@
             cursor: pointer;
             transition: all .5s;
         }
+        @media screen and (max-width: 376px) {
+            .cross_intro, .cross_menu, .cross_map, .cross_contact{
+                background: rgba(236, 236, 236, 0.5);
+         }   
+        }
         .cross1{
             width: 30px;
             height: 15px;
@@ -308,6 +313,9 @@
             position: absolute;
             top: 0;
             transform: translateY(2000px);
+        }
+        .wrapper2 .main{
+            padding-bottom: 35px;
         }
         .container{
             width: 100%;
@@ -356,7 +364,24 @@
         .square:hover img{
             transform: scale(1.04);
         }
-        
+        .page{
+            margin-top: 25px;
+            opacity: .5;
+            transition: all .5s;
+        }
+        @media screen and (max-width: 376px) {
+            .page{
+                width: 500px;
+                text-align: center;
+                opacity: 1;
+         }   
+        }
+        .page:hover{
+            opacity: 1;
+        }
+        .page .svg-inline--fa {
+            height: 2.5em;
+        }
         /*                                                                     map                                                                          */
         @media screen and (max-width: 376px) {
             .media_map{
@@ -383,8 +408,10 @@
             margin-bottom:2px;
        }
        @media screen and (max-width: 376px) {
-            .firstmap{
-                width: 100%;
+            .mediamap{
+                width: 130%;
+                margin-left: -81px;
+                height: 600px;
          }   
         }
        .map_footer{
@@ -602,7 +629,7 @@
                 <div class="cross2"></div>
             </div>
             <h2 class="major">Menu</h2>
-            <div class="container">
+            <div class="container page1">
                 <div class="square"><div class="hover_alt">江記水盆羊肉</div><a href="https://www.instagram.com/p/BksBHttHa9I/" target="_blank"><img src="images/f1-1.jpg" alt="江記水盆羊肉"></a></div>
                 <div class="square"><div class="hover_alt">12MINI</div><a href="https://www.instagram.com/p/BkkUCe5HTpe/" target="_blank"><img src="images/f2-1.jpg" alt="12MINI"></a></div>
                 <div class="square"><div class="hover_alt">蘭芳麵食館</div><a href="https://www.instagram.com/p/Bij6ojPHzGn/" target="_blank"><img src="images/f3-1.jpg" alt="蘭芳麵食館"></a></div>
@@ -635,7 +662,44 @@
                 <div class="square"><div class="hover_alt">合味拉麵</div><a href="https://www.instagram.com/p/BaWGNlGlcoI/" target="_blank"><img src="images/f30-1.jpg" alt="合味拉麵"></a></div>
                 <div class="square"><div class="hover_alt">劉山東牛肉麵</div><a href="https://www.instagram.com/p/BaHJM5yFTG-/" target="_blank"><img src="images/f31-1.jpg" alt="劉山東牛肉麵"></a></div>
                 <div class="square"><div class="hover_alt">江家羊肉店</div><a href="https://www.instagram.com/p/BaBwuIYFf9i/" target="_blank"><img src="images/f32-1.jpg" alt="江家羊肉店"></a></div>
+                <div class="next_page page"><i class="far fa-arrow-alt-circle-right"></i></div>
             </div>
+            <div class="container page2 display-none">
+                <div class="square"><div class="hover_alt">天香回味</div><a href="https://www.instagram.com/p/BZ_WY9IFqe2/" target="_blank"><img src="images/f33-1.jpg" alt="天香回味"></a></div>
+                <div class="square"><div class="hover_alt">鄭記豬腳飯</div><a href="https://www.instagram.com/p/BZ8ZjzllZr0/" target="_blank"><img src="images/f34-1.jpg" alt="鄭記豬腳飯"></a></div>
+                <div class="square"><div class="hover_alt">高雄黑輪大王</div><a href="https://www.instagram.com/p/BZ0rPavlCH4/" target="_blank"><img src="images/f35-1.jpg" alt="高雄黑輪大王"></a></div>
+                <div class="square"><div class="hover_alt">雞吉君</div><a href="https://www.instagram.com/p/BZyi__Wl4l6/" target="_blank"><img src="images/f36-1.jpg" alt="雞吉君"></a></div>
+                <div class="square"><div class="hover_alt">萬芳冰室</div><a href="https://www.instagram.com/p/BZsbVdelUS6/" target="_blank"><img src="images/f37-1.jpg" alt="萬芳冰室"></a></div>
+                <div class="square"><div class="hover_alt">晴光豆花</div><a href="https://www.instagram.com/p/BZq7jHslIjI/" target="_blank"><img src="images/f38-1.jpg" alt="晴光豆花"></a></div>
+                <div class="square"><div class="hover_alt">公館鴉片粉圓</div><a href="https://www.instagram.com/p/BZga1ebFInw/" target="_blank"><img src="images/f39-1.jpg" alt="公館鴉片粉圓"></a></div>
+                <div class="square"><div class="hover_alt">得記港式麻辣鴨血</div><a href="https://www.instagram.com/p/BZd7pZlld9I/" target="_blank"><img src="images/f40-1.jpg" alt="得記港式麻辣鴨血"></a></div>
+                <div class="square"><div class="hover_alt">金雞母甜品</div><a href="https://www.instagram.com/p/BZa6cBoFNT7/" target="_blank"><img src="images/f41-1.jpg" alt="金雞母甜品"></a></div>
+                <div class="square"><div class="hover_alt">春來蚵仔麵線</div><a href="https://www.instagram.com/p/BZWBePRlzc6/" target="_blank"><img src="images/f42-1.jpg" alt="春來蚵仔麵線"></a></div>
+                <div class="square"><div class="hover_alt">薄多義</div><a href="https://www.instagram.com/p/BZOPgY0Fb36/" target="_blank"><img src="images/f43-1.jpg" alt="薄多義"></a></div>
+                <div class="square"><div class="hover_alt">石鱻養生石頭火鍋</div><a href="https://www.instagram.com/p/BZGgeadlxtY/" target="_blank"><img src="images/f44-1.jpg" alt="石鱻養生石頭火鍋"></a></div>
+                <div class="square"><div class="hover_alt">孫家牛拉麵</div><a href="https://www.instagram.com/p/BZEHukllKOe/" target="_blank"><img src="images/f45-1.jpg" alt="孫家牛拉麵"></a></div>
+                <div class="square"><div class="hover_alt">滷底撈</div><a href="https://www.instagram.com/p/BY8aU2gFll6/" target="_blank"><img src="images/f46-1.jpg" alt="滷底撈"></a></div>
+                <div class="square"><div class="hover_alt">大象泰式美食館</div><a href="https://www.instagram.com/p/BY5djZQl3Bm/" target="_blank"><img src="images/f47-1.jpg" alt="大象泰式美食館"></a></div>
+                <div class="square"><div class="hover_alt">好滋味麵館</div><a href="https://www.instagram.com/p/BY3aFOYFJx9/" target="_blank"><img src="images/f48-1.jpg" alt="好滋味麵館"></a></div>
+                <div class="square"><div class="hover_alt">台中第四合作信用社</div><a href="https://www.instagram.com/p/BYyLSwylNY5/" target="_blank"><img src="images/f49-1.jpg" alt="台中第四合作信用社"></a></div>
+                <div class="square"><div class="hover_alt">台中肉員</div><a href="https://www.instagram.com/p/BYvg9z-FHvp/" target="_blank"><img src="images/f50-1.jpg" alt="台中肉員"></a></div>
+                <div class="square"><div class="hover_alt">豪傑越南小吃</div><a href="https://www.instagram.com/p/BYtHymoFSuy/" target="_blank"><img src="images/f51-1.jpg" alt="豪傑越南小吃"></a></div>
+                <div class="square"><div class="hover_alt">偈亭泡菜鍋</div><a href="https://www.instagram.com/p/BYqVfcRlHbk/" target="_blank"><img src="images/f52-1.jpg" alt="偈亭泡菜鍋"></a></div>
+                <div class="square"><div class="hover_alt">甘泉魚麵</div><a href="https://www.instagram.com/p/BYoAAsAlylO/" target="_blank"><img src="images/f53-1.jpg" alt="甘泉魚麵"></a></div>
+                <div class="square"><div class="hover_alt">Home28咖哩專門店</div><a href="https://www.instagram.com/p/BYkTu08FvEv/" target="_blank"><img src="images/f54-1.jpg" alt="Home28咖哩專門店"></a></div>
+                <div class="square"><div class="hover_alt">HUN混</div><a href="https://www.instagram.com/p/BYiV1JEFPsV/" target="_blank"><img src="images/f55-1.jpg" alt="HUN混"></a></div>
+                <div class="square"><div class="hover_alt">屋馬燒肉</div><a href="https://www.instagram.com/p/BYgFcDOFINY/" target="_blank"><img src="images/f56-1.jpg" alt="屋馬燒肉"></a></div>
+                <div class="square"><div class="hover_alt">富錦樹353咖啡</div><a href="https://www.instagram.com/p/BYdsSsWlFAJ/" target="_blank"><img src="images/f57-1.jpg" alt="富錦樹353咖啡"></a></div>
+                <div class="square"><div class="hover_alt">辣極麻辣燙</div><a href="https://www.instagram.com/p/BYazQTAliXN/" target="_blank"><img src="images/f58-1.jpg" alt="辣極麻辣燙"></a></div>
+                <div class="square"><div class="hover_alt">香港大排檔</div><a href="https://www.instagram.com/p/BYXmCeYlViG/" target="_blank"><img src="images/f59-1.jpg" alt="香港大排檔"></a></div>
+                <div class="square"><div class="hover_alt">這一鍋</div><a href="https://www.instagram.com/p/BYVuCKcF-Wh/" target="_blank"><img src="images/f60-1.jpg" alt="這一鍋"></a></div>
+                <div class="square"><div class="hover_alt">樂崎火鍋</div><a href="https://www.instagram.com/p/BYTJtjCFQYu/" target="_blank"><img src="images/f61-1.jpg" alt="樂崎火鍋"></a></div>
+                <div class="square"><div class="hover_alt">兄弟鹽酥雞</div><a href="https://www.instagram.com/p/BYQrjNVlEDZ/" target="_blank"><img src="images/f62-1.jpg" alt="兄弟鹽酥雞"></a></div>
+                <div class="square"><div class="hover_alt">燈籠滷味</div><a href="https://www.instagram.com/p/BYNtNV-lbck/" target="_blank"><img src="images/f63-1.jpg" alt="燈籠滷味"></a></div>
+                <div class="square"><div class="hover_alt">香師傅滷味</div><a href="https://www.instagram.com/p/BYKYIzul7Iv/" target="_blank"><img src="images/f64-1.jpg" alt="香師傅滷味"></a></div>
+                <div class="prev_page page"><i class="far fa-arrow-alt-circle-left"></i></div>
+            </div>
+
         </article>
     </div>
     <!-- Map -->
@@ -648,7 +712,7 @@
             <h2 class="major">Map</h2>
             <div class="map_body">
                 <div class="map_main">
-                    <iframe class="firstmap" src="https://www.google.com/maps/d/embed?mid=13agHdtNkH_dmMNK02ZlVQ6t7ByoDNSOQ" width="740" height="500"></iframe>
+                    <iframe class="mediamap" src="https://www.google.com/maps/d/embed?mid=13agHdtNkH_dmMNK02ZlVQ6t7ByoDNSOQ" width="740" height="500"></iframe>
                 </div>
                 <div class="map_footer">看看Shina在你附近吃了什麼吧😋</div>
             </div>   
@@ -748,6 +812,8 @@
             $(".outer").css("height", "100vh");
             $(".wrapper0").css("opacity", "1");
             $(".wrapper2").css("opacity", "0");
+            $(".page2").addClass("display-none");
+            $(".page1").removeClass("display-none");
         });
         $(".cross_map").click(function(){
             $(".wrapper3").css("transform", "translateX(1500px)");
@@ -763,7 +829,14 @@
         });
     </script>
     <script>
-        
+        $(".next_page").click(function(){
+            $(".page1").addClass("display-none");
+            $(".page2").removeClass("display-none");
+        });
+        $(".prev_page").click(function(){
+            $(".page2").addClass("display-none");
+            $(".page1").removeClass("display-none");
+        });
     </script>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 </body>
